@@ -40,5 +40,14 @@ const root = path.resolve(__dirname, '../../');
 module.exports = {
   root,
   port: 8000,
-  public: path.resolve(root, 'dist')
+  public: path.resolve(root, 'dist'),
+  semanticKernel: {
+    enabled: true,
+    embeddingDimension: 128,
+    features: {
+      textAnalysis: true,
+      embedding: true,
+      semanticSearch: true
+    }
+  }
 };

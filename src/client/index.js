@@ -1,4 +1,4 @@
-/*!
+/* !
  * OS.js - JavaScript Cloud/Web Desktop Platform
  *
  * Copyright (c) 2011-2020, Anders Evenrud <andersevenrud@gmail.com>
@@ -51,6 +51,7 @@ import {
 import {PanelServiceProvider} from '@osjs/panels';
 import {GUIServiceProvider} from '@osjs/gui';
 import {DialogServiceProvider} from '@osjs/dialogs';
+import {SemanticKernelServiceProvider} from './semantic-kernel.js';
 import config from './config.js';
 import './index.scss';
 
@@ -67,6 +68,7 @@ const init = () => {
   osjs.register(PanelServiceProvider);
   osjs.register(DialogServiceProvider);
   osjs.register(GUIServiceProvider);
+  osjs.register(SemanticKernelServiceProvider);
 
   osjs.boot();
 };

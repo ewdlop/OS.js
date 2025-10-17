@@ -47,6 +47,8 @@ const {
   SettingsServiceProvider
 } = require('@osjs/server');
 
+const SemanticKernelServiceProvider = require('./semantic-kernel.js');
+
 const config = require('./config.js');
 const osjs = new Core(config, {});
 
@@ -55,6 +57,7 @@ osjs.register(PackageServiceProvider);
 osjs.register(VFSServiceProvider);
 osjs.register(AuthServiceProvider);
 osjs.register(SettingsServiceProvider);
+osjs.register(SemanticKernelServiceProvider);
 
 const shutdown = signal => (error) => {
   if (error instanceof Error) {

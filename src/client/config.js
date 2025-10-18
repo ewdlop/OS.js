@@ -40,5 +40,13 @@ export default {
       username: 'demo',
       password: 'demo'
     }
+  },
+  semanticKernel: {
+    enabled: true,
+    features: {
+      textAnalysis: true,
+      embedding: true,
+      semanticSearch: true
+    }
   }
 };
